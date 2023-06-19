@@ -19,7 +19,8 @@ export default{
 </script>
 
 <style lang="scss">
-@use './style/general.scss' as *;
-@use './style/partials/mixins' as *;
-@use './style/partials/variables' as *;
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import './style/general.scss';
+@import './style/partials/mixins' ;
+@import './style/partials/variables' ;
 </style>

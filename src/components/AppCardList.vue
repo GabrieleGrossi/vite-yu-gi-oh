@@ -12,9 +12,14 @@ export default {
     name:'AppCardList',
     components:{
         AppSingleCard
+    },
+    created(){
+
     }
 }
 </script>
 <style lang="scss" scoped>
-    
+    *{
+        background-color: white;
+    }
 </style>
