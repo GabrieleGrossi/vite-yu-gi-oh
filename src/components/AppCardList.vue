@@ -1,11 +1,11 @@
 <template>
     <div class="container">
-        <div class="row">
+        <div class="row flex">
             <div class="col-2">
                 <AppSingleCard v-for="card in cardList"
                     :name="card.name"
                     :type="card.type"
-                    :image="card.image_url"
+                    :image="card.card_images"
                 />
             </div>
         </div>

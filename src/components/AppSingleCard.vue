@@ -1,14 +1,14 @@
 <template>
     <div>
         <div class="card" style="width: 18rem;">
-            <img :src="card_images" class="" alt='name + "image"'>
+            <img :src="image.card_images[0].image_url" class="" :alt='name + "image"'>
             <div class="card-body">
                 <h4 class="card-title">
                     {{ name }}
                 </h4>
-                <h4 class="card-text">
+                <h5 class="card-text">
                     {{ type }}
-                </h4>
+                </h5>
             </div>
         </div>
     </div>
@@ -24,7 +24,7 @@ export default {
     props:{
         name: String,
         type: String,
-        card_images: String
+        image: Image
     }
 }
 </script>
