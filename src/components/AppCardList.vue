@@ -3,9 +3,9 @@
         <div class="row">
             <div class="col-2">
                 <AppSingleCard v-for="card in cardList"
-                    :cardName="card.name"
-                    :cardType="card.type"
-                    :cardImage="card.card_images"
+                    :name="card.name"
+                    :type="card.type"
+                    :image="card.image_url"
                 />
             </div>
         </div>
@@ -18,6 +18,7 @@ export default {
     name:'AppCardList',
     data(){
         return{
+            apiUrl:'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0', 
             cardList : [],
         }
     },
@@ -25,11 +26,11 @@ export default {
         AppSingleCard
     },
     created(){
-        axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0')
+        axios.get(this.apiUrl)
         .then( (response) => {
             // handle success
-            console.log(response.data.results);
-            this.cardList = response.data.results;
+            console.log(response.data.data);
+            this.cardList = response.data.data;
         })
         .catch(function (error) {
             // handle error
