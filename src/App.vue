@@ -19,4 +19,7 @@ export default{
 </script>
 
 <style lang="scss">
+@use './style/general.scss' as *;
+@use './style/partials/mixins' as *;
+@use './style/partials/variables' as *;
 </style>
