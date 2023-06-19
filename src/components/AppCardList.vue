@@ -1,11 +1,11 @@
 <template>
     <div class="container">
-        <div class="row flex">
+        <div class="row">
             <div class="col-2">
                 <AppSingleCard v-for="card in cardList"
                     :name="card.name"
                     :type="card.type"
-                    :image="card.card_images"
+                    :image="card.card_images[0].image_url"
                 />
             </div>
         </div>
@@ -29,7 +29,7 @@ export default {
         axios.get(this.apiUrl)
         .then( (response) => {
             // handle success
-            console.log(response.data.data);
+            console.log(response.data.data[0].card_images);
             this.cardList = response.data.data;
         })
         .catch(function (error) {
@@ -40,7 +40,12 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@use '../style/partials/mixins';
     *{
         background-color: white;
+    }
+    .row{
+        display: flex;
+        flex-direction: row;
     }
 </style>

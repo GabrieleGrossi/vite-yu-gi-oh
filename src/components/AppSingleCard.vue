@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="card" style="width: 18rem;">
-            <img :src="image.card_images[0].image_url" class="" :alt='name + "image"'>
+            <img :src="image" class="card-img-top" :alt='name + "image"'>
             <div class="card-body">
                 <h4 class="card-title">
                     {{ name }}
@@ -24,7 +24,7 @@ export default {
     props:{
         name: String,
         type: String,
-        image: Image
+        image: String
     }
 }
 </script>
