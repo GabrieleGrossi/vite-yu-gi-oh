@@ -19,5 +19,6 @@ export default {
 <style lang="scss" scoped>
     main{
         background-color: #d48f38;
+        padding-top: 3rem;
     }
 </style>

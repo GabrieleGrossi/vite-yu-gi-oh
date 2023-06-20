@@ -18,7 +18,6 @@ export default {
     header {
         @include flex(row, start, center, no-wrap);
         padding: 1rem;
-
         img {
             width: 250px;
         };
