@@ -1,30 +1,26 @@
 <template>
-    <div>
-        <select class="form-select" aria-label="Default select example">
-            <option selected>
-                Select a card type
-            </option>
-            <option value="1">
-                One
-            </option>
-            <option value="2">
-                Two
-            </option>
-            <option value="3">
-                Three
+    <div class="my-searchbar">
+        <select name="card-archetype">
+            <option v-for="archetype in archetypeList" :value="archetype.archetype_name">
+
+                {{ archetype.archetype_name }}
             </option>
         </select>
     </div>
 </template>
 <script>
 export default {
-    name: 'AppSearchbar'
+    name: 'AppSearchbar',
+    props:{
+        archetypeList: Array
+    }
 }
 </script>
 <style lang="scss" scoped>
-    select{
-        width: 20%;
+    
+    .my-searchbar {
+        width: 50%;
         margin: 0 auto;
-        margin-top: 1rem;
+        padding: 1.5rem;
     }
 </style>
