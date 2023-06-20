@@ -1,15 +1,17 @@
 <template>
     <main>
-        <h1>App Main</h1>
+        <AppSearchbar/>
         <AppCardList/>
     </main>
 </template>
 <script>
+import AppSearchbar from './AppSearchbar.vue'
 import AppCardList from './AppCardList.vue';
 export default {
     name: 'AppMain',
     components:{
     AppCardList,
+    AppSearchbar
     },
         
 }
