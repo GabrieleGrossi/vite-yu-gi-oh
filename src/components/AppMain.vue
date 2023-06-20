@@ -1,7 +1,8 @@
 <template>
     <main>
         <AppSearchbar
-        :archetypeList="archetypeList"/>
+        :archetypeList="archetypeList"
+        @eventChangeType="archetypeChange"/>
         <AppCardList/>
     </main>
 </template>
@@ -20,6 +21,18 @@ export default {
     data(){
         return{
             archetypeList:[],
+        }
+    },
+    methods: {
+        archetypeChange(archetype) {
+            axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=' + archetype)
+            .then(function (response) {
+                    console.log(response.data.data);
+                        store.listApi = response.data.data;
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    })
         }
     },
     created(){

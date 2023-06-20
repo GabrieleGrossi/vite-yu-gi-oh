@@ -29,6 +29,8 @@ export default {
         padding: 3rem;
         width: 80%;
         margin: 0 auto;
+        overflow: scroll;
+        max-height: 100vh;
 
         h2 {
             background-color: black;
