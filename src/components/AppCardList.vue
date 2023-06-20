@@ -2,14 +2,14 @@
     <section>
         <div class="my-container black">
             <div class="my-row">
-                <div class="col-12">
-                    <h2 class="my-search">
+                <div class="col-12 my-search">
+                    <h2>
                         You found {{ cardList.length }} cards
                     </h2>
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="my-container">
             <div class="row">
                 <div class="col-12 d-flex flex-wrap ">
                     <AppSingleCard v-for="card in cardList"
@@ -60,10 +60,11 @@ export default {
     .my-container{
         width: 80%;
         margin: 0 auto;
+        
     }
     .my-row{
         width: 50%;
-        margin-toptop: 2rem;
+        margin-top: 2rem;
     }
     .my-search{
         padding-top: 2rem;

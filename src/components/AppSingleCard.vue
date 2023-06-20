@@ -31,8 +31,9 @@ export default {
 <style lang="scss" scoped>
     .card {
     height: 100%;
-    width: 150px;
-    margin-left: 2.7rem;
+    width: 180px;
+    margin: 0 auto;
+    margin-right: 60px;
     background-color: #d48f38;
     }
     .container-image{
