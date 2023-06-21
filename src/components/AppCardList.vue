@@ -29,7 +29,7 @@ export default {
         padding: 3rem;
         width: 80%;
         margin: 0 auto;
-        overflow: scroll;
+        overflow-y: scroll;
         max-height: 100vh;
 
         h2 {

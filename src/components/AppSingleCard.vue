@@ -7,6 +7,9 @@
         <span>
             {{ singleCard.archetype }}
         </span>
+        <span>
+            {{ singleCard.desc }}
+        </span>
     </div>
 </template>
 <script>
@@ -30,6 +33,7 @@ export default {
     height: 500px;
     margin: 1.2rem 0;
     text-align: center;
+    overflow-y: scroll;
     img {
         width: 100%;
     };
